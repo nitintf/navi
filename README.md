@@ -4,12 +4,6 @@
 
 ## Usage
 
-Before using Navi, you need to set your Gemini API key as an environment variable in your shell:
-
-```shell
-export GEMINI_API_KEY="..."
-```
-
 ```shell
 Navi - Your AI-powered Shell Guide
 
@@ -55,6 +49,19 @@ $ navi explain "ls -a`
 $ Explanation >>
 
 the command explanation
+```
+
+## Installation
+
+You can install Navi using the `go get` command:
+
+```shell
+go install github.com/nitintf/navi
+```
+
+After installation, don't forget to export your Gemini API key:
+```shell
+export GEMINI_API_KEY="..."
 ```
 
 ## Caution
