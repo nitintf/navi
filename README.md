@@ -4,6 +4,12 @@
 
 ## Usage
 
+Before using Navi, you need to set your Gemini API key as an environment variable in your shell:
+
+```shell
+export GEMINI_API_KEY="..."
+```
+
 ```shell
 Navi - Your AI-powered Shell Guide
 
@@ -54,6 +60,13 @@ the command explanation
 ## Caution
 
 While Navi uses AI to generate shell commands, it's important to understand that AI isn't perfect. Always review the generated commands before executing them, especially if you're working in a production environment or dealing with sensitive data. Navi is a tool designed to assist you, but it doesn't replace good judgment and understanding of shell commands.
+
+## Contribution
+
+Contributions to Navi are very welcome! If you have a feature request, bug report, or proposal for code refactoring, please feel free to open an issue or submit a pull request.
+
+This thing only supports Gemini for the moment, but it could be easily updated to support other models using Replicate, Ollama, etc. [Pull requests welcome](https://github.com/zeke/yolox/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)!
+
 
 ## License
 
