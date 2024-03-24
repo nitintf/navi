@@ -53,7 +53,7 @@ the command explanation
 
 ## Installation
 
-You can install Navi using the `go get` command:
+You can install Navi using the `go install` command:
 
 ```shell
 go install github.com/nitintf/navi
@@ -63,6 +63,7 @@ After installation, don't forget to export your Gemini API key:
 ```shell
 export GEMINI_API_KEY="..."
 ```
+You can obtain your Gemini API key from the [Gemini API Management page](https://aistudio.google.com/app/apikey).
 
 ## Caution
 
