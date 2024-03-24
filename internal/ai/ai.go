@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"log"
+	"os"
 	"strings"
 	"sync"
 
@@ -20,7 +21,13 @@ var (
 func NewClient() (*genai.Client, error) {
 	once.Do(func() {
 		ctx := context.Background()
-		apiKey := "AIzaSyCb80wbY7KIUo2ZplN7_VSPmx6AcdpH_lA" // Replace with your actual API key (don't store directly in code)
+
+		apiKey := os.Getenv("GEMINI_API_KEY")
+
+		if apiKey == "" {
+			log.Fatal("GEMINI_API_KEY not set")
+		}
+
 		var err error
 		client, err = genai.NewClient(ctx, option.WithAPIKey(apiKey))
 		if err != nil {
