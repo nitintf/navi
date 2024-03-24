@@ -73,7 +73,7 @@ While Navi uses AI to generate shell commands, it's important to understand that
 
 Contributions to Navi are very welcome! If you have a feature request, bug report, or proposal for code refactoring, please feel free to open an issue or submit a pull request.
 
-This thing only supports Gemini for the moment, but it could be easily updated to support other models using Replicate, Ollama, etc. [Pull requests welcome](https://github.com/zeke/yolox/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)!
+This thing only supports Gemini for the moment, but it could be easily updated to support other models using Replicate, Ollama, etc. [Pull requests welcome](https://github.com/nitintf/navi/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)!
 
 
 ## License
