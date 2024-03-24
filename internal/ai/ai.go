@@ -48,7 +48,6 @@ func Generate(ctx context.Context, template string, prompt string) (string, erro
 	userPrompt := fmt.Sprintf(template, prompt)
 
 	resp, err := model.GenerateContent(ctx, genai.Text(userPrompt))
-
 	if err != nil {
 		return "", err
 	}
@@ -81,5 +80,4 @@ func getResponse(resp *genai.GenerateContentResponse) genai.Part {
 	}
 
 	return foundPart
-
 }

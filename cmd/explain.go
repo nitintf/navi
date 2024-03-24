@@ -54,7 +54,6 @@ var explainCmd = &cobra.Command{
 		spin.Suffix = " Explaining command..."
 		spin.Start()
 		resp, err := ai.Generate(cmd.Context(), explainTemplate, command)
-
 		if err != nil {
 			spin.Stop()
 			utils.LogError(err.Error())

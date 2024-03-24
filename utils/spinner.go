@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"log"
 	"sync"
 	"time"
 
@@ -15,7 +16,10 @@ var (
 func GetSpinner() *spinner.Spinner {
 	once.Do(func() {
 		spin = spinner.New(spinner.CharSets[14], 100*time.Millisecond)
-		spin.Color("cyan")
+		err := spin.Color("cyan")
+		if err != nil {
+			log.Fatal(err)
+		}
 	})
 	return spin
 }

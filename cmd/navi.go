@@ -63,7 +63,6 @@ var rootCmd = &cobra.Command{
 		spin.Suffix = " Generating command..."
 		spin.Start()
 		resp, err := ai.Generate(cmd.Context(), commandTemplate, prompt)
-
 		if err != nil {
 			spin.Stop()
 			utils.LogError(err.Error())
