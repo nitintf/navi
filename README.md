@@ -11,9 +11,10 @@ The `navi` command takes a string as an argument and generates a shell command b
 Example:
 
 ```shell
-navi "list all files`
+$ navi "list all files`
+
+$ >> ls -a
 ```
-This might output `ls -a`
 
 ### navi explain
 The `navi explain` command also takes a string (shell command) as an argument, and explains the functionality of a given shell command.
@@ -21,5 +22,9 @@ The `navi explain` command also takes a string (shell command) as an argument, a
 Example:
 
 ```shell
-navi explain "ls -a"
+$ navi explain "ls -a`
+
+$ Explanation >>
+
+the command explanation
 ```
