@@ -1,6 +1,6 @@
 # Navi: AI-Powered Shell Guide
 
-Navi is a command-line tool that utilizes artificial intelligence to generate shell commands based on your prompts. It simplifies your workflow by understanding your intent and providing the necessary commands to achieve your tasks.
+"Navi" means "guide" in Hindi, and that's exactly what this tool aims to be. Navi is a command-line tool that utilizes the Gemini API to leverage artificial intelligence in generating shell commands based on your prompts. It simplifies your workflow by understanding your intent and providing the necessary commands to achieve your tasks.
 
 
 ## Commands
