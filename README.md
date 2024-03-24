@@ -2,10 +2,32 @@
 
 "Navi" means "guide" in Hindi, and that's exactly what this tool aims to be. Navi is a command-line tool that utilizes the Gemini API to leverage artificial intelligence in generating shell commands based on your prompts. It simplifies your workflow by understanding your intent and providing the necessary commands to achieve your tasks.
 
+## Usage
+
+```shell
+Navi - Your AI-powered Shell Guide
+
+Usage:
+  navi [flags]
+  navi [command]
+
+Examples:
+navi "List all files in the current directory."
+
+Available Commands:
+  completion  Generate the autocompletion script for the specified shell
+  explain     Explain - Understand your shell commands
+  help        Help about any command
+
+Flags:
+  -h, --help   help for navi
+
+Use "navi [command] --help" for more information about a command.
+```
 
 ## Commands
 
-### navi
+### 1. navi
 The `navi` command takes a string as an argument and generates a shell command based on that string.
 
 Example:
@@ -16,7 +38,7 @@ $ navi "list all files`
 $ >> ls -a
 ```
 
-### navi explain
+### 2. navi explain
 The `navi explain` command also takes a string (shell command) as an argument, and explains the functionality of a given shell command.
 
 Example:
@@ -28,3 +50,7 @@ $ Explanation >>
 
 the command explanation
 ```
+
+## Caution
+
+While Navi uses AI to generate shell commands, it's important to understand that AI isn't perfect. Always review the generated commands before executing them, especially if you're working in a production environment or dealing with sensitive data. Navi is a tool designed to assist you, but it doesn't replace good judgment and understanding of shell commands.

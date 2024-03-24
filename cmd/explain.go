@@ -37,10 +37,10 @@ If the command is not a shell command, return "NAVI_AI_ERROR".
 `
 
 var explainCmd = &cobra.Command{
-	Use:   "explain",
-	Short: "Explain - Understand your shell commands",
-	Long:  `Explain is a sub-command that uses AI to understand your shell commands and provide a detailed explanation.`,
-	Args:  cobra.ExactArgs(1),
+	Use:     "explain",
+	Short:   "Explain - Understand your shell commands",
+	Example: `navi explain "ls"`,
+	Args:    cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		command := args[0]
 		commandLength := len(command)

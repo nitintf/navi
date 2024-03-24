@@ -46,10 +46,10 @@ If the prompt is a shell command but is not safe, return "NAVI_AI_ERROR".
 `
 
 var rootCmd = &cobra.Command{
-	Use:   "navi",
-	Short: "Navi - Your AI-powered Shell Guide",
-	Long:  `Navi is a command-line tool that uses AI to understand your natural language prompts and generate the corresponding shell commands. Think of it as your guide in the shell world!`,
-	Args:  cobra.ExactArgs(1),
+	Use:     "navi",
+	Short:   "Navi - Your AI-powered Shell Guide",
+	Example: `navi "List all files in the current directory."`,
+	Args:    cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		prompt := args[0]
 		promptLength := len(prompt)
