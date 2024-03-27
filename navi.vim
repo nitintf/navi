@@ -1,14 +1,17 @@
-" Integrates Navi into Vim interface.
-" Ctrl+K will prompt the cursor line.
-" In Visual mode, will prompt the select portion.
-" Set `_` below:
+" Navi for Vim.
+" Set `g:NaviBin` path  below.
+" Mapped to Ctrl+K (you can change bellow).
+" On Normal Mode passes the current line.
+" Or select many lines.
 
 let g:NaviBin = '_'
+let g:gretting = '...waiting for Navi...'
 
 let g:selectionCallCalled = 0
-let g:gretting = '...waiting for Navi...'
-let g:done_string = 'Done.'
 autocmd CursorMoved * let g:selectionCallCalled = 0
+
+nnoremap <C-k> :<C-u>call SingleLineCall()<CR>
+xnoremap <C-k> :<C-u>call SelectionCall()<CR>
 
 function! EscapeSpecialChars(str)
 	let escapedStr = substitute(a:str, "'", "''", 'g')
@@ -49,11 +52,11 @@ function! SelectionCall()
 	let end_pos = getpos("'>")
 	let start_line = start_pos[1]
 	let end_line = end_pos[1]
+	execute "normal " . end_line . "G"
 	let lines = getline(start_line, end_line)
 	let line = join(lines, '\n')
 	let out = Navi(line)
 	call PrintOut(out)
-	echo g:done_string
 endfunction
 
 function! SingleLineCall()
@@ -61,8 +64,4 @@ function! SingleLineCall()
 	let line = getline('.')
 	let out = Navi(line)
 	call PrintOut(out)
-	echo g:done_string
 endfunction
-
-nnoremap <C-k> :<C-u>call SingleLineCall()<CR>
-xnoremap <C-k> :<C-u>call SelectionCall()<CR>
