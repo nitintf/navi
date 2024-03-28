@@ -1,5 +1,5 @@
 " Navi for Vim.
-" Set `g:NaviBin` path  below.
+" Set `g:NaviBin` path below.
 " Mapped to Ctrl+K (you can change bellow).
 " On Normal Mode passes the current line.
 " Or select many lines.

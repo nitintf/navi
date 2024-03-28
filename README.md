@@ -67,6 +67,24 @@ export GEMINI_API_KEY="..."
 ```
 You can obtain your Gemini API key from the [Gemini API Management page](https://aistudio.google.com/app/apikey).
 
+## Vim integration
+
+### Plugin load and installation
+
+Edit `navi.vim` to set `g:NaviBin` to your custom binary location. Optionally, change the chord of choice (defaults to `<C-k>`).
+
+In Vim, you just have to `:source navi.vim`.
+
+But - if you want the plugin to be persistent, make it load when Vim starts: copy `navi.vim` to any directory present in your runtime path (`:echo &runtimepath`). Check if the script is loaded with `:scriptnames`.
+
+### Usage
+
+In Normal Mode, press <C-k> (or your chord of choice) to pass your current line to `Navi`. In Visual Mode, you may select more lines.
+
+### Limitations
+
+Currently, `Navi` works terminal and shell commands only. You have to clean the output by hand.
+
 ## Caution
 
 While Navi uses AI to generate shell commands, it's important to understand that AI isn't perfect. Always review the generated commands before executing them, especially if you're working in a production environment or dealing with sensitive data. Navi is a tool designed to assist you, but it doesn't replace good judgment and understanding of shell commands.
