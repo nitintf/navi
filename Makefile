@@ -1,14 +1,15 @@
 # Define variables
-GOBIN := ./bin
+GOBIN := ./bin/navi
 GOPACKAGES := $(shell go list ./... | grep -v /vendor)
 
 # Build command
 build:
-	go build -o $(GOBIN)/navi ./main.go
+	-mkdir -p ./bin
+	go build -o $(GOBIN) ./main.go
 
 # Run command
 run: build
-	$(GOBIN)/navi
+	$(GOBIN)
 
 # Test command (assuming you have unit tests)
 test:
@@ -16,7 +17,7 @@ test:
 
 # Clean command
 clean:
-	rm -rf $(GOBIN)
+	rm $(GOBIN) # This was too dengerous when $(GOBIN) was only './bin'!
 
 # Live reload command (optional)
 livereload:
