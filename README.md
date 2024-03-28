@@ -81,10 +81,6 @@ But - if you want the plugin to be persistent, make it load when Vim starts: cop
 
 In Normal Mode, press <C-k> (or your chord of choice) to pass your current line to `Navi`. In Visual Mode, you may select more lines.
 
-### Limitations
-
-Currently, `Navi` works terminal and shell commands only. You have to clean the output by hand.
-
 ## Caution
 
 While Navi uses AI to generate shell commands, it's important to understand that AI isn't perfect. Always review the generated commands before executing them, especially if you're working in a production environment or dealing with sensitive data. Navi is a tool designed to assist you, but it doesn't replace good judgment and understanding of shell commands.
