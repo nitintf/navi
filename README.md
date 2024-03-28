@@ -71,15 +71,15 @@ You can obtain your Gemini API key from the [Gemini API Management page](https:/
 
 ### Plugin load and installation
 
-Edit `navi.vim` to set `g:NaviBin` to your custom binary location. Optionally, change the chord of choice (defaults to `<C-k>`).
+Edit `navi.vim` to set `g:NaviBin` to your custom binary location. Optionally, change the preferred key combination (defaults to `<C-k>`).
 
-In Vim, you just have to `:source navi.vim`.
+In Vim, you simply have to `:source navi.vim`.
 
-But - if you want the plugin to be persistent, make it load when Vim starts: copy `navi.vim` to any directory present in your runtime path (`:echo &runtimepath`). Check if the script is loaded with `:scriptnames`.
+However, if you want the plugin to be persistent, make it load when Vim starts: copy `navi.vim` to any directory present in your runtime path (`:echo &runtimepath`). Restart Vim. Verify if the script is loaded with `:scriptnames`.
 
 ### Usage
 
-In Normal Mode, press <C-k> (or your chord of choice) to pass your current line to `Navi`. In Visual Mode, you may select more lines.
+In Normal Mode, press your preferred key combination (or <C-k> by default) to pass your current line to `Navi`. In Visual Mode, you may select more lines.
 
 ## Caution
 
