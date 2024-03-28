@@ -17,8 +17,13 @@ function! EscapeSpecialChars(str)
 	let escapedStr = substitute(a:str, "'", "''", 'g')
 	let escapedStr = substitute(escapedStr, '"', '\\"', 'g')
 	let escapedStr = substitute(escapedStr, "`", "\\`", 'g')
-	let escapedStr = substitute(escapedStr, '\v[^a-zA-Z0-9]', '', 'g')
 	return escapedStr
+endfunction
+
+function! CleanAnsi(str)
+	let clean = substitute(a:str, '[\033\e\x1B]\?\[[0-9;]*m', '', 'g')
+	let clean = substitute(clean, '^>> \+', '', 'g')
+	return clean
 endfunction
 
 fun! Navi(s)
@@ -30,7 +35,7 @@ fun! Navi(s)
 	let lines = split(return_from_navi, '\v\n')
 	let out = []
 	for line in lines
-		call add(out, line)
+		call add(out, CleanAnsi(line))
 	endfor
 	return out
 endfunction
