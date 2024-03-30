@@ -13,7 +13,7 @@ import (
 func main() {
 	exePath, err := os.Executable()
 	if err != nil {
-		log.Fatalf("Error getting current exectuable path: ", err)
+		log.Fatalf("Error getting current executable path: ", err)
 	}
 	exeDir := filepath.Dir(exePath)
 	envPath := filepath.Join(exeDir, ".env")
